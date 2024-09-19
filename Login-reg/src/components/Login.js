@@ -14,11 +14,11 @@ const Login = () => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Redirect to a different page or handle login success
-      window.location.href = '/dashboard';  // Redirect to dashboard or another page
+      
+      window.location.href = '/dashboard';  
     } catch (error) {
-      setError(error.message);  // Display error message
-      console.error('Error logging in:', error.message);  // Log error
+      setError(error.message); 
+      console.error('Error logging in:', error.message);  
     }
   };
 
